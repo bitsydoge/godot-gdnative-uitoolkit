@@ -2,13 +2,13 @@
 import os, subprocess
 
 # define our target
-target_path = 'game/bin/'
-target_name = 'libgdtest'
+target_path = 'game/UIToolkit/bin'
+target_name = 'UIToolkit'
 
 # Local dependency paths, adapt them to your setup
 godot_headers_path = "godot-cpp/godot_headers/"
 cpp_bindings_path = "godot-cpp/"
-cpp_library = "godot-cpp"
+cpp_library = "libgodot-cpp"
 
 target = ARGUMENTS.get("target", "debug")
 

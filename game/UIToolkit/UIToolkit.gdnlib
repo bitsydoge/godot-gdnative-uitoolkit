@@ -1,8 +1,8 @@
 [entry]
 
-X11.64="res://bin/x11/libgdtest.so"
-Windows.64="res://bin/win64/libgdtest.dll"
-OSX.64="res://bin/osx/libgdtest.dylib"
+X11.64="res://UIToolkit/bin/x11/UIToolkit.so"
+Windows.64="res://UIToolkit/bin/win64/UIToolkit.dll"
+OSX.64="res://UIToolkit/bin/osx/UIToolkit.dylib"
 
 [dependencies]
 
