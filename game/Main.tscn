@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://QuakeStyleWindow.tscn" type="PackedScene" id=1]
+[ext_resource path="res://bin/QuakeScroll.gdns" type="Script" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Control
+
+onready var QuakeStyle = get_parent().get_node(\"QuakeStyleWindow\")
+
+func _on_Button_pressed():
+	QuakeStyle.toggle()
+	pass # Replace with function body.
+"
+
+[node name="Node2D" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -126.5
+margin_top = -37.5
+margin_right = 126.5
+margin_bottom = 37.5
+text = "Trigger"
+script = SubResource( 1 )
+
+[node name="QuakeStyleWindow" parent="." instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+height_open = 250
+open_speed = 2.0
+open_transition_type = 6
+
+[node name="Title" type="Label" parent="QuakeStyleWindow/Content" index="0"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -139.5
+margin_top = -236.0
+margin_right = 139.5
+margin_bottom = -194.0
+text = "Lorema ipsuma"
+align = 1
+valign = 1
+
+[node name="Lorem" type="RichTextLabel" parent="QuakeStyleWindow/Content" index="1"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -473.0
+margin_top = -188.0
+margin_right = 472.0
+margin_bottom = -34.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper id metus sed placerat. Donec tellus eros, fringilla consequat tellus id, cursus iaculis mauris. Suspendisse semper leo hendrerit ipsum mollis blandit. Cras ut lorem nulla. Duis pharetra pharetra dui a commodo. In eleifend molestie rutrum. Fusce egestas in risus nec malesuada. Proin feugiat neque id sem aliquam, in pretium ante tincidunt. Ut laoreet at tellus eget luctus.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper id metus sed placerat. Donec tellus eros, fringilla consequat tellus id, cursus iaculis mauris. Suspendisse semper leo hendrerit ipsum mollis blandit. Cras ut lorem nulla. Duis pharetra pharetra dui a commodo. In eleifend molestie rutrum. Fusce egestas in risus nec malesuada. Proin feugiat neque id sem aliquam, in pretium ante tincidunt. Ut laoreet at tellus eget luctus.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper id metus sed placerat. Donec tellus eros, fringilla consequat tellus id, cursus iaculis mauris. Suspendisse semper leo hendrerit ipsum mollis blandit. Cras ut lorem nulla. Duis pharetra pharetra dui a commodo. In eleifend molestie rutrum. Fusce egestas in risus nec malesuada. Proin feugiat neque id sem aliquam, in pretium ante tincidunt. Ut laoreet at tellus eget luctus.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper id metus sed placerat. Donec tellus eros, fringilla consequat tellus id, cursus iaculis mauris. Suspendisse semper leo hendrerit ipsum mollis blandit. Cras ut lorem nulla. Duis pharetra pharetra dui a commodo. In eleifend molestie rutrum. Fusce egestas in risus nec malesuada. Proin feugiat neque id sem aliquam, in pretium ante tincidunt. Ut laoreet at tellus eget luctus."
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+
+[editable path="QuakeStyleWindow"]

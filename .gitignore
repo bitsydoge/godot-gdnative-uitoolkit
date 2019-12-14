@@ -6,3 +6,13 @@ export_presets.cfg
 
 # Mono-specific ignores
 .mono/
+
+# scons
+.sconsign.dblite
+
+# build
+*.dll
+*.exe
+*.exp
+*.obj
+*.lib
