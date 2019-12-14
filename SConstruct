@@ -2,7 +2,7 @@
 import os, subprocess
 
 # define our target
-target_path = 'game/UIToolkit/bin'
+target_path = 'game/UIToolkit/bin/'
 target_name = 'UIToolkit'
 
 # Local dependency paths, adapt them to your setup
