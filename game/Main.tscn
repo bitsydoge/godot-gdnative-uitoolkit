@@ -33,6 +33,9 @@ height_open = 250
 open_speed = 2.0
 open_transition_type = 6
 
+[node name="Content" parent="QuakeStyleWindow" index="1"]
+editor/display_folded = true
+
 [node name="Title" type="Label" parent="QuakeStyleWindow/Content" index="0"]
 anchor_left = 0.5
 anchor_top = 1.0
