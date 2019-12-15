@@ -2,17 +2,42 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "SCons Build",
+            "label": "Build",
             "command": "scons",
             "type": "shell",
             "args": [
-                "platform=windows"
+                "platform=windows",
+                "-j12"
             ],
             "group": "build",
             "problemMatcher": []
         },
         {
-            "label": "Run Game Project",
+            "label": "Clean",
+            "command": "scons",
+            "type": "shell",
+            "args": [
+                "-c"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Rebuild",
+            "command": "scons",
+            "type": "shell",
+            "args": [
+                "platform=windows",
+                "-j12"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "dependsOn": [
+                "Build"
+            ]
+        },
+        {
+            "label": "Run Game",
             "command": "godot",
             "type": "shell",
             "args": [],
@@ -21,12 +46,12 @@
                 "cwd": "${workspaceFolder}/game/"
             },
             "dependsOn": [
-                "SCons Build"
+                "Build"
             ],
             "problemMatcher": []
         },
         {
-            "label": "Run Godot Editor",
+            "label": "Start Editor",
             "command": "godot",
             "type": "shell",
             "args": [

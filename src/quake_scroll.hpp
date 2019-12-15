@@ -18,10 +18,10 @@ private:
 	// -------------------------------------------------------
 	Tween * tween;
 	bool switcher = true;
-	double start_position_y;
-	double start_size_y;
-	double end_position_y;
-	double end_size_y;
+	real_t start_position_y;
+	real_t start_size_y;
+	real_t end_position_y;
+	real_t end_size_y;
 
 	// -------------------------------------------------------
 	// Export
