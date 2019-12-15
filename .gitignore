@@ -16,3 +16,6 @@ export_presets.cfg
 *.exp
 *.obj
 *.lib
+*.so
+*.a
+*.os

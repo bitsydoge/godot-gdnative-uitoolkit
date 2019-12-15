@@ -1,18 +1,18 @@
-[entry]
-
-X11.64="res://UIToolkit/bin/x11/UIToolkit.so"
-Windows.64="res://UIToolkit/bin/win64/UIToolkit.dll"
-OSX.64="res://UIToolkit/bin/osx/UIToolkit.dylib"
-
-[dependencies]
-
-X11.64=[  ]
-Windows.64=[  ]
-OSX.64=[  ]
-
 [general]
 
 singleton=false
 load_once=true
 symbol_prefix="godot_"
 reloadable=true
+
+[entry]
+
+OSX.64="res://UIToolkit/bin/osx/UIToolkit.dylib"
+Windows.64="res://UIToolkit/bin/win64/UIToolkit.dll"
+X11.64="res://UIToolkit/bin/x11/libUIToolkit.so"
+
+[dependencies]
+
+OSX.64=[  ]
+Windows.64=[  ]
+X11.64=[  ]
