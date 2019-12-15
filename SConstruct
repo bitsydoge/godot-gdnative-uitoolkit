@@ -51,7 +51,9 @@ if platform == "windows":
         env.Append(CCFLAGS = ['-O2', '-EHsc', '-DNDEBUG', '-MD'])
     target_path += 'win64/'
     cpp_library += '.windows.debug.default'
-
+if platform == "android":
+	Exit("Android isn't supported yet")
+	
 # , 'include', 'include/core'
 env.Append(CPPPATH=['.', 'src/', godot_headers_path, cpp_bindings_path + 'include/', cpp_bindings_path + 'include/core/', cpp_bindings_path + 'include/gen/'])
 env.Append(LIBPATH=[cpp_bindings_path + 'bin/'])

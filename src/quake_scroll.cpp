@@ -81,6 +81,7 @@ void QuakeScroll::_init()
 
 void QuakeScroll::_ready()
 {
+	Godot::print("Init_QuakeScroll in " + get_name() + " node");
 	tween = godot::Object::cast_to<Tween>(get_node("Tween"));
 	start_position_y = get_position().y;
 	if(expand_direction == Direction::TOP)

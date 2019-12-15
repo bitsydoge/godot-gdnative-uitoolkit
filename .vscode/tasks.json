@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "SCons Build",
+            "command": "scons",
+            "type": "shell",
+            "args": [
+                "platform=windows"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Game Project",
+            "command": "godot",
+            "type": "shell",
+            "args": [],
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/game/"
+            },
+            "dependsOn": [
+                "SCons Build"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Godot Editor",
+            "command": "godot",
+            "type": "shell",
+            "args": [
+                "${workspaceFolder}/game/project.godot"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}
