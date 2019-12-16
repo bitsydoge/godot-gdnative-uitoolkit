@@ -2,7 +2,7 @@
 
 ## How to use
 - You'll need everything needed to build godot
-- Clone with recursive `git clone --recursive https://github.com/Coldragon/godot-quake_scroll-gdnative.git`
+- Clone with recursive `git clone --recursive https://github.com/Coldragon/UIToolkit-GDNative.git`
 - Build godot-cpp, go inside the godot-cpp folder and use scons
 ```
 scons platform=<your_platform> generate_bindings=yes
