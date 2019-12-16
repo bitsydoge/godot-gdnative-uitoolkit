@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://UIToolkit/QuakeScroll/QuakeScroll.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UIToolkit/WindowResizer/WindowResizer.tscn" type="PackedScene" id=2]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Control
@@ -12,29 +13,19 @@ func _on_Button_pressed():
 	pass # Replace with function body.
 "
 
-[node name="Node2D" type="Control"]
+[node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Button" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -126.5
-margin_top = -37.5
-margin_right = 126.5
-margin_bottom = 37.5
-text = "Trigger"
-script = SubResource( 1 )
+[node name="WindowResizer" parent="." instance=ExtResource( 2 )]
 
 [node name="QuakeStyleWindow" parent="." instance=ExtResource( 1 )]
 height_open = 250
 open_speed = 2.0
 open_transition_type = 6
-
-[node name="Content" parent="QuakeStyleWindow" index="1"]
-editor/display_folded = true
 
 [node name="Title" type="Label" parent="QuakeStyleWindow/Content" index="0"]
 anchor_left = 0.5
@@ -62,6 +53,21 @@ text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper id metus sed placerat. Donec tellus eros, fringilla consequat tellus id, cursus iaculis mauris. Suspendisse semper leo hendrerit ipsum mollis blandit. Cras ut lorem nulla. Duis pharetra pharetra dui a commodo. In eleifend molestie rutrum. Fusce egestas in risus nec malesuada. Proin feugiat neque id sem aliquam, in pretium ante tincidunt. Ut laoreet at tellus eget luctus.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper id metus sed placerat. Donec tellus eros, fringilla consequat tellus id, cursus iaculis mauris. Suspendisse semper leo hendrerit ipsum mollis blandit. Cras ut lorem nulla. Duis pharetra pharetra dui a commodo. In eleifend molestie rutrum. Fusce egestas in risus nec malesuada. Proin feugiat neque id sem aliquam, in pretium ante tincidunt. Ut laoreet at tellus eget luctus.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper id metus sed placerat. Donec tellus eros, fringilla consequat tellus id, cursus iaculis mauris. Suspendisse semper leo hendrerit ipsum mollis blandit. Cras ut lorem nulla. Duis pharetra pharetra dui a commodo. In eleifend molestie rutrum. Fusce egestas in risus nec malesuada. Proin feugiat neque id sem aliquam, in pretium ante tincidunt. Ut laoreet at tellus eget luctus."
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -126.5
+margin_top = -37.5
+margin_right = 126.5
+margin_bottom = 37.5
+text = "Trigger"
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
 
 [editable path="QuakeStyleWindow"]

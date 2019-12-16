@@ -1,0 +1,8 @@
+[gd_resource type="NativeScript" load_steps=2 format=2]
+
+[ext_resource path="res://UIToolkit/UIToolkit.gdnlib" type="GDNativeLibrary" id=1]
+
+[resource]
+resource_name = "WindowResizer"
+class_name = "WindowResizer"
+library = ExtResource( 1 )

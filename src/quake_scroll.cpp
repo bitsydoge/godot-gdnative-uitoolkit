@@ -8,7 +8,7 @@ void QuakeScroll::_register_methods()
 	// METHODS
 	register_method("_ready", &QuakeScroll::_ready);
 	register_method("toggle", &QuakeScroll::toggle);
-
+	
 	// PROPERTY
 	register_property<QuakeScroll, int>("height_open", &QuakeScroll::set_height_open, &QuakeScroll::get_height_open, 200);
 	register_property<QuakeScroll, real_t>("open_speed", &QuakeScroll::set_open_speed, &QuakeScroll::get_open_speed, 1.0);
