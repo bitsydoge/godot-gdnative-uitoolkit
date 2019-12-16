@@ -4,3 +4,7 @@
 
 [node name="WindowResizer" type="Node"]
 script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Title: If it's empty keep the original title
+Window Size: If it's equal to 0,0 it keep the original size"
+}

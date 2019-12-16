@@ -6,6 +6,7 @@ void WindowResizer::_register_methods()
 {
     // METHODS
 	register_method("_ready", &WindowResizer::_ready);
+    register_method("toggle", &WindowResizer::Toggle);
 
     // PROPERTY
     register_property<WindowResizer, String>(
@@ -65,6 +66,12 @@ void WindowResizer::_register_methods()
 		GODOT_PROPERTY_HINT_ENUM, 
 		String("KEEP:-1, FALSE:0, TRUE:1")
 	);
+
+    register_property<WindowResizer, bool>(
+        "auto_trigger", 
+        &WindowResizer::auto_trigger, 
+        false
+    );
 }
 
 void WindowResizer::_init() 
@@ -74,9 +81,14 @@ void WindowResizer::_init()
 
 void WindowResizer::_ready()
 {
-    Godot::print(window_resizable);
-
     os = OS::get_singleton();
+    if(auto_trigger)
+        Toggle(); 
+    Godot::print(String(window_resizable+window_borderless+window_ontop+window_fullscreen+window_maximized));
+}
+
+void WindowResizer::Toggle()
+{
     if (title != "")
         os->set_window_title(title);
     if (window_size != Vector2(0,0))

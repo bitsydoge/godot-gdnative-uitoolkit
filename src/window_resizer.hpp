@@ -29,10 +29,13 @@ private:
     int window_fullscreen = Choice::KEEP;
     int window_maximized = Choice::KEEP;
     
+    bool auto_trigger = false;
+    
 public:
     static void _register_methods();
     void _init();
     void _ready();
+    void Toggle();
 };
 
 }
