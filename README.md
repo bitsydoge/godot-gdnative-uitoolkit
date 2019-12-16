@@ -1,4 +1,4 @@
-# QuakeScroll GDNative
+# UIToolkit GDNative
 
 ## How to use
 - You'll need everything needed to build godot
@@ -11,9 +11,9 @@ For example on Windows
 ```
 scons platform=windows generate_bindings=yes
 ```
-- Build the library that contain QuakeScroll class
+- Build the UIToolkit library 
 
 ```
 scons platform=windows
 ```
-- You can now launch the godot project in the game folder (Godot 3.1.2)
+- You can now launch the godot demo project in the game folder (Tested with Godot master during beta3+)
