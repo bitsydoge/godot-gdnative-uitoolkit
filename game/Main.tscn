@@ -10,15 +10,14 @@ onready var QuakeStyle = get_parent().get_node(\"QuakeStyleWindow\")
 
 func _on_Button_pressed():
 	QuakeStyle.toggle()
-	pass # Replace with function body.
 "
 
 [sub_resource type="GDScript" id=2]
 script/source = "extends Button
 
 func _on_Trigger_SwitchScene_pressed():
-	get_tree().change_scene(\"res://Test1.tscn\")
-	pass # Replace with function body.
+	# warning-ignore:return_value_discarded
+	get_tree().change_scene(\"res://Test.tscn\")
 "
 
 [node name="Control" type="Control"]
@@ -29,12 +28,10 @@ __meta__ = {
 }
 
 [node name="WindowResizer" parent="." instance=ExtResource( 2 )]
-window_size = Vector2( 1800, 480 )
+window_size = Vector2( 1280, 720 )
+auto_trigger = true
 
 [node name="QuakeStyleWindow" parent="." instance=ExtResource( 1 )]
-height_open = 250
-open_speed = 2.0
-open_transition_type = 6
 
 [node name="Title" type="Label" parent="QuakeStyleWindow/Content" index="0"]
 anchor_left = 0.5
@@ -68,11 +65,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -126.5
-margin_top = -37.5
-margin_right = 126.5
-margin_bottom = 37.5
-text = "Trigger"
+margin_left = -127.76
+margin_top = 16.6766
+margin_right = 125.24
+margin_bottom = 91.6766
+text = "Test QuackScroll"
 script = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -84,10 +81,10 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -183.0
-margin_top = 64.5
+margin_top = -118.756
 margin_right = 183.0
-margin_bottom = 167.5
-text = "Switch Scene Test1"
+margin_bottom = -15.756
+text = "Test WindowResize"
 script = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false

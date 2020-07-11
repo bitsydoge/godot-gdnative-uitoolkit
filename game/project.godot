@@ -8,13 +8,17 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "WindowResizer",
+"language": "NativeScript",
+"path": "res://UIToolkit/WindowResizer/WindowResizer.gdns"
+} ]
 _global_script_class_icons={
-
+"WindowResizer": ""
 }
 
 [application]
 
 config/name="UIToolkit"
 run/main_scene="res://Main.tscn"
-config/icon="res://icon.png"
